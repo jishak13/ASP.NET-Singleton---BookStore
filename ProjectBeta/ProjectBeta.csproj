@@ -156,6 +156,7 @@
     <Content Include="Images\cart-50-px.png" />
     <Content Include="Images\cart-30-px.png" />
     <Content Include="JS\search.js" />
+    <Content Include="NewTest.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -218,6 +219,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="NewTest.aspx.cs">
+      <DependentUpon>NewTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewTest.aspx.designer.cs">
+      <DependentUpon>NewTest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchResults.aspx.cs">
