@@ -2,17 +2,19 @@
 
 .ser-input {
     border-color: transparent;
-    border-bottom-color: #fff;
-    color: #fff;
+    border-bottom-color: #B78C33;
+    color: #000000;
+    border-radius: 0px
 }
 
-    .ser-input:focus {
-        border-color: transparent;
-        color: #fff;
-        border-bottom: 1px solid #fff;
-        float: left;
-        margin-top: 1%;
-    }
+.ser-input:focus {
+    border-color: transparent;
+    color: #fff;
+    border-bottom: 1px solid #B78C33;
+    float: left;
+    margin-top: 1%;
+    border-radius: 0px
+}
 
 .search-full-view {
     position: fixed;
@@ -26,57 +28,81 @@
     transition: .5s all;
     transform: scale(0);
 }
-.visible{
-    
+
+.visible {
 }
 
-    .search-full-view.search-normal-screen {
-        opacity: 1;
-        z-index: 1;
-        transform: scale(1);
+.search-full-view.search-normal-screen {
+    opacity: 1;
+    z-index: 1;
+    transform: scale(1);
+}
+
+.search-full-view .input-group {
+    width: 100%;
+    margin: 10%;
+    top: 25%;
+    height: 100px;
+}
+
+.search-full-view .input-group .form-control {
+    background-color: transparent;
+    border-bottom: 2px solid #CFA856;
+    font-size: 5em;
+    padding: 10px;
+    vertical-align: unset;
+    color: #cdcdcd;
+    height: 100%;
+    width: 100%;
+    border-radius: 0px
+}
+
+.search-full-view .input-group .form-control:focus {
+    border-color: #fff;
+    border: 0 !important;
+    border-bottom: 2px solid #B78C33 !important;
+    border-radius: 0px
+}
+
+.search-full-view .input-group .input-group-addon {
+    background: transparent;
+    font-size: 4em;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+}
+
+.search-full-view .btn-close {
+    background: transparent;
+    border: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+    .search-full-view .btn-close img {
+        width: 60px;
     }
 
-    .search-full-view .input-group {
-        width: 80%;
-        margin:  10%;
-        top: 25%;
-        height: 100px;
-    }
+.searchButton {
+    float: left;
+}
 
-        .search-full-view .input-group .form-control {
-            background: transparent;
-            border-bottom: 2px solid #fff;
-            font-size: 5em;
-            padding: 10px;
-            vertical-align: unset;
-            color: #cdcdcd;
-            height: 100%;
-            width: 100%;
-        }
+#searchTextBox {
+    width: 75%;
+}
 
-            .search-full-view .input-group .form-control:focus {
-                border-color: #fff;
-                border: 0 !important;
-                border-bottom: 2px solid #fff !important;
-            }
+.fa {
+    color: #B78C33;
+}
 
-        .search-full-view .input-group .input-group-addon {
-            background: transparent;
-            font-size: 4em;
-            color: #fff;
-            border: 0;
-            cursor: pointer;
-        }
+.activeAchor {
+    border-bottom: 2px solid #B78C33;
+    color: #B78C33;
+}
 
-    .search-full-view .btn-close {
-        background: transparent;
-        border: 0;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-    }
-
-        .search-full-view .btn-close img {
-            width: 60px;
-        }
+.test {
+    font-size: x-large;
+    color: red;
+}

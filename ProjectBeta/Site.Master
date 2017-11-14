@@ -61,25 +61,33 @@
                     </ul>
                     <div class="navbar-form navbar-right" id="divinput">
                      <%--<div class="input-group">--%>
-                        <input type="text" class="form-control ser-input" id="ser-input" placeholder="Search...">
-                        <%--<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAnUExURQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN0S+bUAAAANdFJOU/xFAeC7IQ6LV8tzqC22rO/+AAABgElEQVQ4EXWTvU7DMBSFL0pUSOlQwgvQS5q2oUMEEgNTVBiQ2CKxR2ViqzoihqhIwJj2CaJMSCxR1y5VJd4L22ns67Y+Q3783eP4+DqAJoEJIHwA0+MBDiEnMN1HEFqIfnp0gJzP2WBgHyBiyIfxHtquLZqZSD41kfbCRC4aJuKdmEhwbCIdx0QQ/p41xVjvdSS2T12akuTWDVWoyE6gpCE97JEqH0ni6X3IZpL0tEBD1rR6bXogXlcTvUOXLUUwcskK0gUhkykhZUEIDSSmrr+DNFBwyvySDEgg8SwJDbS+ph4aSKxGemigcEM9mLnsVagvGiw9qAJ5TV6gSHt+tlUqOqJIolq91D0D52Grp1gnPTE7H6ukZuvs/EOK0EDcpQgJJKYjhJ0XKkJe7J/vSp+8gpBhWCcS54gQzO3MXq1KuLfGugfBvWLVSQujQiddC3mm9gjTpU58iPkBWN9W206/U95N2GHwnF/Y6B58BSgQuxmI35l68Oud1WL/Lea3f1H5vx181DsQAAAAAElFTkSuQmCC">--%>
-                     <%--</div>--%>
-                          <button id ="shoppingCart" class="navbar-right" ></button>
-                <div class="search-full-view">
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Search...">
-                      <span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
-                    </div>
-                 <button class="btn btn-close" id="search-close"> <img src="http://d9hhrg4mnvzow.cloudfront.net/www2.iweb.com/windows-server-2016/ed5b870c-clear-close-cancel-white.png"></button>
+                        <asp:TextBox ID="serInput" runat="server" CssClass="ser-input form-control navbar-right" Text="Search..." Height="35px" BackColor="Transparent" ForeColor="#9A9DA0"></asp:TextBox>
+                        <button id ="shoppingCart" class="navbar-right" ></button>
 
-                </div>
+                        <div class="search-full-view">
+                            <div class="input-group">
+                                <asp:Panel ID="panSearch" runat="server" DefaultButton="searchButton">                                  
+                                    <asp:TextBox ID="searchTextBox" runat="server" CssClass="form-control" ClientIDMode="Inherit" BorderStyle="Solid" BorderColor="White" BorderWidth="1px"></asp:TextBox>
+                                    <asp:LinkButton ID="searchButton" runat="server" CssClass="input-group-addon" OnClick="searchButton_Click" BorderStyle="None" BorderColor="Black">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </asp:LinkButton>
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter search criteria!" ControlToValidate="searchTextBox" Visible="True" Font-Size="X-Large" ForeColor="#B78C33"></asp:RequiredFieldValidator>
+                                </asp:Panel>   
+                            
+                                <asp:Label ID="previousSearchLabel" runat="server" Visible="False" ForeColor="#B78C33" Font-Size="Large"></asp:Label>
+                                <%--<asp:Label ID="previousSearchLabel" runat="server" Visible="False" Font-Size="Medium"></asp:Label>--%>
+                                <%--<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAnUExURQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN0S+bUAAAANdFJOU/xFAeC7IQ6LV8tzqC22rO/+AAABgElEQVQ4EXWTvU7DMBSFL0pUSOlQwgvQS5q2oUMEEgNTVBiQ2CKxR2ViqzoihqhIwJj2CaJMSCxR1y5VJd4L22ns67Y+Q3783eP4+DqAJoEJIHwA0+MBDiEnMN1HEFqIfnp0gJzP2WBgHyBiyIfxHtquLZqZSD41kfbCRC4aJuKdmEhwbCIdx0QQ/p41xVjvdSS2T12akuTWDVWoyE6gpCE97JEqH0ni6X3IZpL0tEBD1rR6bXogXlcTvUOXLUUwcskK0gUhkykhZUEIDSSmrr+DNFBwyvySDEgg8SwJDbS+ph4aSKxGemigcEM9mLnsVagvGiw9qAJ5TV6gSHt+tlUqOqJIolq91D0D52Grp1gnPTE7H6ukZuvs/EOK0EDcpQgJJKYjhJ0XKkJe7J/vSp+8gpBhWCcS54gQzO3MXq1KuLfGugfBvWLVSQujQiddC3mm9gjTpU58iPkBWN9W206/U95N2GHwnF/Y6B58BSgQuxmI35l68Oud1WL/Lea3f1H5vx181DsQAAAAAElFTkSuQmCC">--%>                              <%--</div>--%>
+                            </div>
 
+                            <asp:ImageButton ID="searchClose" runat="server" CssClass="btn btn-close" ImageUrl="http://d9hhrg4mnvzow.cloudfront.net/www2.iweb.com/windows-server-2016/ed5b870c-clear-close-cancel-white.png" Width="60px" OnClientClick="return false;"/>
+                        </div>
+                    </div>                  
+                </div>             
             </div>
-                   
-                </div>
-               
         </div>
-               </div>
          
     
         <div class="container body-content">

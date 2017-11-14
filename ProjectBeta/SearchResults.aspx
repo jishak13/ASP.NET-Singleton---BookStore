@@ -3,5 +3,6 @@
     <h2><%: Title %></h2>
     <h3>CONRO CHANGED THIS AY WADDUP FAM</h3>
     <p>Use this area to provide additional information.</p>
+    <h3 id="searchString" runat="server"></h3>
 </asp:Content>
 
