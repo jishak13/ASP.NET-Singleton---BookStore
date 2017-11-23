@@ -11,6 +11,7 @@ namespace ProjectBeta
     {
         private string currentSearch;
         private List<Products> cart = new List<Products>();
+        CartItem cartItem;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -38,6 +39,11 @@ namespace ProjectBeta
 
         protected void GridView1_RowCommand1(object sender, GridViewCommandEventArgs e)
         {
+            //if (Page.IsPostBack)
+            //{
+            //    if(Session["cart"]!=null)
+                
+            //}
             if (e.CommandName == "AddToCart")
             {
                 int index = Convert.ToInt32(e.CommandArgument);
@@ -51,8 +57,9 @@ namespace ProjectBeta
                 string Price = selectedRow.Cells[5].Text;
 
                 Products newProd = new Products(isbn, author, title, Course, Code, Price);
-                cart.Add(newProd);
-                Session["cart"] = cart;
+                //cart.Add(newProd);
+                Cart.Instance.AddItem(newProd);
+                
             }
         }
     
