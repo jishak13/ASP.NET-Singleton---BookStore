@@ -18,7 +18,7 @@
 </head>
 <body>
     <form runat="server">
-        s<asp:ScriptManager runat="server">
+        <asp:ScriptManager runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
                 <%--Framework Scripts--%>
@@ -62,8 +62,9 @@
                     <div class="navbar-form navbar-right" id="divinput">
                      <%--<div class="input-group">--%>
                         <asp:TextBox ID="serInput" runat="server" CssClass="ser-input form-control navbar-right" Text="Search..." Height="35px" BackColor="Transparent" ForeColor="#9A9DA0"></asp:TextBox>
-                        <asp:LinkButton id ="shoppingCart" runat ="server" class="navbar-right"  onclick="GoToShoppingCart"></asp:LinkButton>
-
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="ShoppingCart.aspx">
+                        <asp:image ID="shoppingCart" runat="server" ImageUrl="~/Images/cart-30-px.png"  >  </asp:image>
+                     </asp:HyperLink>
                         <div class="search-full-view">
                             <div class="input-group">
                                 <asp:Panel ID="panSearch" runat="server" DefaultButton="searchButton">                                  
@@ -95,7 +96,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Books R' Us</p>
             </footer>
         </div>
 
@@ -107,7 +108,7 @@
                 <div class="col-sm-12">
                     <div class="about">
 	                    <img src="images/logo.png" class="img-responsive center-block" alt="">
-	                    <p>STUFF GOES HERE AY WADDUP STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF </p>
+<%--	                    <p>STUFF GOES HERE AY WADDUP STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF STUFF </p>--%>
 
                         <div class="social-media">
 		                    <ul class="list-inline">

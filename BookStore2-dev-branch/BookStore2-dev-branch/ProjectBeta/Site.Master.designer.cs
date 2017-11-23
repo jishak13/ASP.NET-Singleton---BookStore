@@ -22,13 +22,22 @@ namespace ProjectBeta {
         protected global::System.Web.UI.WebControls.TextBox serInput;
         
         /// <summary>
+        /// HyperLink1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        
+        /// <summary>
         /// shoppingCart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton shoppingCart;
+        protected global::System.Web.UI.WebControls.Image shoppingCart;
         
         /// <summary>
         /// panSearch control.

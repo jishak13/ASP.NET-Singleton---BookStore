@@ -13,6 +13,8 @@ namespace ProjectBeta
         private List<Products> cart = new List<Products>();
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            GridView1.CellPadding = 40;
             //Checks if there is a query string
             if (Request.QueryString["search"] != String.Empty && Request.QueryString["search"] != null)
             {

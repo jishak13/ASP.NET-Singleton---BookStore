@@ -3,16 +3,42 @@
     <h2><%: Title %></h2>
     <h3>CONRO CHANGED THIS AY WADDUP FAM</h3>
     <p>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnRowCommand="GridView1_RowCommand1">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnRowCommand="GridView1_RowCommand1" AllowSorting="True" CellPadding="4" ForeColor="#333333" GridLines="None">
+            <AlternatingRowStyle BackColor="White" />
             <Columns>
-                <asp:BoundField  DataField="isbn" HeaderText="isbn" SortExpression="isbn" />
-                <asp:BoundField DataField="author" HeaderText="author" SortExpression="author" />
-                <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" />
-                <asp:BoundField DataField="Course" HeaderText="Course" SortExpression="Course" />
-                <asp:BoundField DataField="code" HeaderText="code" SortExpression="code" />
-                <asp:BoundField DataField="price" HeaderText="price" SortExpression="price" />
-                <asp:ButtonField ButtonType="Button" CommandName="AddToCart" Text="Add to Cart" />
+                <asp:BoundField  DataField="isbn" HeaderText="isbn" SortExpression="isbn" >
+                <HeaderStyle BackColor="#333333" ForeColor="#AA8841" />
+                <ItemStyle HorizontalAlign="Left" Width="40px" />
+                </asp:BoundField>
+                <asp:BoundField DataField="author" HeaderText="author" SortExpression="author" >
+                <HeaderStyle BackColor="#333333" ForeColor="#AA8841" />
+                </asp:BoundField>
+                <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" >
+                <HeaderStyle BackColor="#333333" ForeColor="#AA8841" />
+                </asp:BoundField>
+                <asp:BoundField DataField="Course" HeaderText="Course" SortExpression="Course" >
+                <HeaderStyle BackColor="#333333" ForeColor="#AA8841" />
+                </asp:BoundField>
+                <asp:BoundField DataField="code" HeaderText="code" SortExpression="code" >
+                <HeaderStyle BackColor="#333333" ForeColor="#AA8841" />
+                </asp:BoundField>
+                <asp:BoundField DataField="price" HeaderText="price" SortExpression="price" >
+                <HeaderStyle BackColor="#333333" ForeColor="#AA8841" />
+                </asp:BoundField>
+                <asp:ButtonField ButtonType="Button" CommandName="AddToCart" Text="Add to Cart" >
+                <HeaderStyle BackColor="#333333" />
+                </asp:ButtonField>
             </Columns>
+            <EditRowStyle BackColor="#2461BF" />
+            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EFF3FB" />
+            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+            <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:BooksRUsConnectionString %>" SelectCommand="Select *
  FROM bcview
