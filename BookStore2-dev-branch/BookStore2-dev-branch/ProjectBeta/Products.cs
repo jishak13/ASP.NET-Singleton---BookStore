@@ -5,6 +5,7 @@ using System.Web;
 
 namespace ProjectBeta
 {
+    [Serializable]
     public class Products
     {
         private string isbn;

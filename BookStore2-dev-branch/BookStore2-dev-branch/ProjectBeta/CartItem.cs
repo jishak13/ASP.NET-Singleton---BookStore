@@ -11,7 +11,10 @@ namespace ProjectBeta
         int quantity;
 
         public Products Product { get => product; set => product = value; }
+        public string Title { get { return Product.Title; } }
+        public string Author { get { return Product.Author; } }
         public int Quantity { get => quantity; set => quantity = value; }
+        public decimal UnitPrice { get { return Convert.ToDecimal(Product.Price); } }
         public decimal TotalPrice { get { return Convert.ToDecimal(Product.Price) * Quantity; } }
         public CartItem() { }
         public CartItem(Products prod)

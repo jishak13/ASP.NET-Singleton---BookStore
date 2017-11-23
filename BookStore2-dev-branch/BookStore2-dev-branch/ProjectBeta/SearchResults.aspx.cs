@@ -22,7 +22,7 @@ namespace ProjectBeta
                 //do stuff with query string yay
                 currentSearch = Request.QueryString["search"];
                 Session["PreviousSearch"] = currentSearch;
-                searchString.InnerHtml = "The query string(what they searched for) passed was: " + currentSearch;
+               lblOutput.Text = "Search Results for " + currentSearch;
             }
             else
             {
