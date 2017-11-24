@@ -29,8 +29,6 @@ namespace ProjectBeta {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvCart;
-<<<<<<< HEAD
-=======
         
         /// <summary>
         /// HyperLink2 control.
@@ -40,6 +38,5 @@ namespace ProjectBeta {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
->>>>>>> 281a82a8fa517d0a24c16ea3ae4d3426674444e0
     }
 }

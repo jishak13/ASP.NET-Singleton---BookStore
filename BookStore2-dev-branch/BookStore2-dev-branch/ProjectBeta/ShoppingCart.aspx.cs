@@ -32,13 +32,5 @@ namespace ProjectBeta
         {
 
         }
-<<<<<<< HEAD
-=======
-
-        protected void btnProceedToCheckoutClick(object sender, EventArgs e)
-        {
-            Response.Redirect("ConfirmationPage.aspx");
-        }
->>>>>>> 281a82a8fa517d0a24c16ea3ae4d3426674444e0
     }
 }
