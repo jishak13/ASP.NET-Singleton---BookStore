@@ -11,9 +11,9 @@
                 <AlternatingRowStyle BackColor="#F8F8F8" />
                 <Columns>
  
-                    <asp:BoundField DataField="Title" HeaderText="Title" />
-                     <asp:BoundField DataField="Author" HeaderText="Author" />
-                    <asp:TemplateField HeaderText="Quantity">
+                    <asp:BoundField DataField="Title" HeaderText="Title" ItemStyle-HorizontalAlign="Left" HeaderStyle-HorizontalAlign="Left" />
+                     <asp:BoundField DataField="Author" HeaderText="Author" ItemStyle-HorizontalAlign="Left" HeaderStyle-HorizontalAlign="Left" />
+                    <asp:TemplateField HeaderText="Quantity" ItemStyle-HorizontalAlign="Left" HeaderStyle-HorizontalAlign="Left">
                         <ItemTemplate>
                             <asp:TextBox runat="server" ID="txtQuantity"  Columns="5" Text='<%# Eval("Quantity") %>' ></asp:TextBox><br />
                             <asp:LinkButton runat="server" ID="btnRemove" Text="Remove" CommandName="Remove" CommandArgument='<%# Eval("Product") %>' style="font-size:12px;"></asp:LinkButton>
@@ -24,6 +24,7 @@
                     <asp:BoundField DataField="TotalPrice" HeaderText="Total" ItemStyle-HorizontalAlign="Right" HeaderStyle-HorizontalAlign="Right" DataFormatString="{0:C}" />
                 </Columns>
             </asp:GridView>
+
 
             <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ConfirmationPage.aspx" CssClass="has-feedback" style="float: right">Checkout</asp:HyperLink>
 </asp:Content>
