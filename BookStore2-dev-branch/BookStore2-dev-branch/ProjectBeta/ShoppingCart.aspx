@@ -5,7 +5,7 @@
     <h3>Your cart contains
         <asp:Label ID="lblCartCount" runat="server"></asp:Label>
 &nbsp;Items
-        <asp:GridView runat="server" ID="gvCart" AutoGenerateColumns="false" EmptyDataText="There is nothing in your shopping cart." GridLines="None" Width="100%" CellPadding="5" ShowFooter="true" DataKeyNames="Product" OnRowDataBound="gvCart_RowDataBound" OnRowCommand="gvCart_RowCommand" >
+        <asp:GridView runat="server" ID="gvCart" AutoGenerateColumns="False" EmptyDataText="There is nothing in your shopping cart." GridLines="None" Width="100%" CellPadding="5" ShowFooter="True" DataKeyNames="Product" OnRowDataBound="gvCart_RowDataBound" OnRowCommand="gvCart_RowCommand" >
                 <HeaderStyle HorizontalAlign="Left" BackColor="#333333" ForeColor="#AA8841" />
                 <FooterStyle HorizontalAlign="Right" BackColor="#6C6B66" ForeColor="#FFFFFF" />
                 <AlternatingRowStyle BackColor="#F8F8F8" />
