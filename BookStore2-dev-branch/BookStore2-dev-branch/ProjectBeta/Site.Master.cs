@@ -38,9 +38,5 @@ namespace ProjectBeta
                 Response.Redirect("SearchResults.aspx?search=" + searchTextBox.Text);
             }
         }
-        public void GoToShoppingCart(object sender, EventArgs e)
-        {
-            Response.Redirect("ShoppingCart.aspx");
-        }
     }
 }
