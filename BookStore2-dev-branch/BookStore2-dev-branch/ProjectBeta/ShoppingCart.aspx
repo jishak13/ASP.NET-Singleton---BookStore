@@ -25,4 +25,7 @@
                 </Columns>
             </asp:GridView>
     </h3>
+    <p>
+        <asp:Button ID="btnProceedToCheckout" runat="server" CssClass="fa-pull-right" OnClick="btnProceedToCheckout_Click" Text="Checkout" />
+    </p>
 </asp:Content>

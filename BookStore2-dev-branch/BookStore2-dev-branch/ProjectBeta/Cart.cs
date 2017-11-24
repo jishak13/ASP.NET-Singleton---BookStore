@@ -121,5 +121,20 @@ namespace ProjectBeta
             
         }
 
+        public decimal GetShipping()
+        {
+            return ((decimal).01 * GetSubTotal()) * 100;
+        }
+
+        public decimal GetTax()
+        {
+            return (GetSubTotal() * (decimal).0675);
+        }
+
+        public decimal GetTotal()
+        {
+            return GetSubTotal() + GetShipping() + GetTax();
+        }
+
     }
 }

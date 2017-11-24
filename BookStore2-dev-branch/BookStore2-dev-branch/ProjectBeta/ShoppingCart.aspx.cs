@@ -32,5 +32,10 @@ namespace ProjectBeta
         {
 
         }
+
+        protected void btnProceedToCheckout_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/ConfirmationPage.aspx");
+        }
     }
 }

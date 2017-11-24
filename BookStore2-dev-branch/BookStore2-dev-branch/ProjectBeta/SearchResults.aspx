@@ -4,7 +4,7 @@
     <h3 id="lblSearchResults">
     <asp:Label ID="lblOutput" runat="server" Text="Label"></asp:Label>
     </h3>
-    <p>
+    <p style="position: relative">
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnRowCommand="GridView1_RowCommand1" AllowSorting="True" Width="100%" CellPadding="5" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
@@ -60,6 +60,7 @@ Or([Code] LIKE '%' + @Code + '%'))
             </SelectParameters>
         </asp:SqlDataSource>
         </p>
-    <h3 id="searchString" runat="server"></h3>
+    <h3 id="searchString" runat="server">
+        &nbsp;</h3>
 </asp:Content>
 
