@@ -6,29 +6,29 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </h3>
     <p style="position: relative">
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnRowCommand="GridView1_RowCommand1" AllowSorting="True" Width="100%" CellPadding="5" ForeColor="#333333" GridLines="None">
+        <asp:GridView ID="GridView1" HorizontalAlign="Left" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnRowCommand="GridView1_RowCommand1" AllowSorting="True" Width="100%" CellPadding="5" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
-                <asp:BoundField  DataField="isbn" HeaderText="ISBN" SortExpression="isbn" >
-                <HeaderStyle BackColor="#333333" ForeColor="#AA8841" />
+                <asp:BoundField  DataField="isbn" HeaderText="ISBN" SortExpression="isbn" ItemStyle-HorizontalAlign="Left" HeaderStyle-HorizontalAlign="Left">
+                <HeaderStyle BackColor="#333333" ForeColor="#AA8841" width="20%"/>
                 <ItemStyle HorizontalAlign="Left" Width="40px" />
                 </asp:BoundField>
-                <asp:BoundField DataField="author" HeaderText="Author" SortExpression="author" >
+                <asp:BoundField DataField="author" HeaderText="Author" SortExpression="author" ItemStyle-HorizontalAlign="Left" HeaderStyle-HorizontalAlign="Left">
                 <HeaderStyle BackColor="#333333" ForeColor="#AA8841" />
                 </asp:BoundField>
-                <asp:BoundField DataField="title" HeaderText="Title" SortExpression="title" >
+                <asp:BoundField DataField="title" HeaderText="Title" SortExpression="title" ItemStyle-HorizontalAlign="Left" HeaderStyle-HorizontalAlign="Left">
                 <HeaderStyle BackColor="#333333" ForeColor="#AA8841" />
                 </asp:BoundField>
-                <asp:BoundField DataField="Course" HeaderText="Course" SortExpression="Course" >
+                <asp:BoundField DataField="Course" HeaderText="Course" SortExpression="Course" ItemStyle-HorizontalAlign="Left" HeaderStyle-HorizontalAlign="Left">
                 <HeaderStyle BackColor="#333333" ForeColor="#AA8841" />
                 </asp:BoundField>
-                <asp:BoundField DataField="code" HeaderText="Code" SortExpression="code" >
+                <asp:BoundField DataField="code" HeaderText="Code" SortExpression="code" ItemStyle-HorizontalAlign="Left" HeaderStyle-HorizontalAlign="Left">
                 <HeaderStyle BackColor="#333333" ForeColor="#AA8841" />
                 </asp:BoundField>
-                <asp:BoundField DataField="price" HeaderText="Price" SortExpression="price" >
+                <asp:BoundField DataField="price" HeaderText="Price" SortExpression="price" ItemStyle-HorizontalAlign="Left" HeaderStyle-HorizontalAlign="Left">
                 <HeaderStyle BackColor="#333333" ForeColor="#AA8841" />
                 </asp:BoundField>
-                <asp:ButtonField ButtonType="Button" CommandName="AddToCart" Text="Add to Cart" >
+                <asp:ButtonField ButtonType="Button" CommandName="AddToCart" Text="Add to Cart" ItemStyle-HorizontalAlign="Left" HeaderStyle-HorizontalAlign="Left">
                 <HeaderStyle BackColor="#333333" />
                 </asp:ButtonField>
             </Columns>

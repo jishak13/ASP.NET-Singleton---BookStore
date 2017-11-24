@@ -2257,9 +2257,6 @@ caption {
   color: #777;
   text-align: left;
 }
-th {
-  text-align: left;
-}
 .table {
   width: 100%;
   max-width: 100%;
@@ -2324,7 +2321,7 @@ th {
   background-color: #f5f5f5;
 }
 table col[class*="col-"] {
-  position: static;
+  /*position: static; */
   display: table-column;
   float: none;
 }
@@ -6755,4 +6752,5 @@ button.close {
     display: none !important;
   }
 }
+
 /*# sourceMappingURL=bootstrap.css.map */
