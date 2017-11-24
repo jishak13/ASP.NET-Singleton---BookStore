@@ -11,7 +11,7 @@ namespace ProjectBeta
     {
         private string currentSearch;
         private List<Products> cart = new List<Products>();
-        CartItem cartItem;
+        //CartItem cartItem;
         protected void Page_Load(object sender, EventArgs e)
         {
 

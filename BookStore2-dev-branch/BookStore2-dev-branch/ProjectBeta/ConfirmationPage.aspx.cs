@@ -13,6 +13,7 @@ namespace ProjectBeta
         {
             confirmCart.DataSource = Cart.Instance.Items;
             confirmCart.DataBind();
+   
         }
 
         protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -22,5 +23,9 @@ namespace ProjectBeta
                 e.Row.Cells[3].Text = $"SubTotal: {Cart.Instance.GetSubTotal():C}<br>Shipping & Handling: {Cart.Instance.GetShipping():C}<br>Tax: {Cart.Instance.GetTax():C}<br>Total: {Cart.Instance.GetTotal():C}";
             }
         }
+
+     
+
+    
     }
 }

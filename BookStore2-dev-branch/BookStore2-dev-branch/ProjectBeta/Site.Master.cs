@@ -38,9 +38,6 @@ namespace ProjectBeta
                 Response.Redirect("SearchResults.aspx?search=" + searchTextBox.Text);
             }
         }
-<<<<<<< HEAD
-=======
-   
->>>>>>> f797f7e2933bbd2fca53f41a5eb5e9f976fca895
+
     }
 }

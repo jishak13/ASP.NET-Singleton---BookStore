@@ -18,7 +18,7 @@
             </p>
         </div>
         <div class="col-md-4">
-            <h2>Get more for less</h2>
+            <h2>Get less for more</h2>
             <p>
                 Books R&#39; Us offers students a discount. Be studeous with us.</p>
             <p>

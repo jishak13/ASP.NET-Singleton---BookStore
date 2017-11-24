@@ -22,13 +22,13 @@
                 <HeaderStyle BackColor="#333333" ForeColor="#AA8841" />
                 </asp:BoundField>
                 <asp:BoundField DataField="code" HeaderText="Code" SortExpression="code" >
-                <HeaderStyle BackColor="#333333" ForeColor="#AA8841" />
+                <HeaderStyle BackColor="#333333" ForeColor="#AA8841" HorizontalAlign="Right" />
                 </asp:BoundField>
                 <asp:BoundField DataField="price" HeaderText="Price" SortExpression="price" >
-                <HeaderStyle BackColor="#333333" ForeColor="#AA8841" />
+                <HeaderStyle BackColor="#333333" ForeColor="#AA8841" HorizontalAlign="Right" />
                 </asp:BoundField>
                 <asp:ButtonField ButtonType="Button" CommandName="AddToCart" Text="Add to Cart" >
-                <HeaderStyle BackColor="#333333" />
+                <HeaderStyle BackColor="#333333"  />
                 </asp:ButtonField>
             </Columns>
             <EditRowStyle BackColor="#2461BF" />
