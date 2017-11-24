@@ -62,8 +62,8 @@ Or([Code] LIKE '%' + @Code + '%'))
         </asp:SqlDataSource>
         </p>
 
-    <h3 id="searchString" runat="server">
-        &nbsp;</h3>
+<%--    <h3 id="searchString" runat="server">
+        &nbsp;</h3>--%>
 
     <h3 id="searchString" runat="server" class="text-center">
         <asp:Label ID="addToCartLabel" runat="server"></asp:Label>
