@@ -22,13 +22,14 @@ namespace ProjectBeta
                 //do stuff with query string yay
                 currentSearch = Request.QueryString["search"];
                 Session["PreviousSearch"] = currentSearch;
-               lblOutput.Text = "Search Results for " + currentSearch;
+                lblOutput.Text = "Search Results for \"" + currentSearch + "\"";
             }
             else
             {
                 //oh no m8, no query string for u
                 searchString.InnerHtml = "No query string";
             }
+
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -59,6 +60,11 @@ namespace ProjectBeta
                 Products newProd = new Products(isbn, author, title, Course, Code, Price);
                 //cart.Add(newProd);
                 Cart.Instance.AddItem(newProd);
+
+
+                addToCartLabel.Text = title + " added to cart!";
+
+                //Session["previouslyAddedItem"] = title;
                 
             }
         }

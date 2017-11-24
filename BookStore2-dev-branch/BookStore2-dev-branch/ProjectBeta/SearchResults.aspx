@@ -3,6 +3,7 @@
     <h2><%: Title %></h2>
     <h3 id="lblSearchResults">
     <asp:Label ID="lblOutput" runat="server" Text="Label"></asp:Label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </h3>
     <p style="position: relative">
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" OnRowCommand="GridView1_RowCommand1" AllowSorting="True" Width="100%" CellPadding="5" ForeColor="#333333" GridLines="None">
@@ -60,7 +61,13 @@ Or([Code] LIKE '%' + @Code + '%'))
             </SelectParameters>
         </asp:SqlDataSource>
         </p>
+
     <h3 id="searchString" runat="server">
         &nbsp;</h3>
+
+    <h3 id="searchString" runat="server" class="text-center">
+        <asp:Label ID="addToCartLabel" runat="server"></asp:Label>
+    </h3>
+
 </asp:Content>
 
