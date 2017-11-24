@@ -5,13 +5,28 @@ using System.Web;
 
 namespace ProjectBeta
 {
+    /// <summary>
+    /// The Shopping Cart Object Class
+    /// </summary>
     public partial class Cart
     {
+        /// <summary>
+        /// A List of all Cart Items in this shopping cart
+        /// </summary>
         public List<CartItem> Items { get; private set; }
 
 
-
+        /// <summary>
+        /// The instance of a shopping cart
+        /// </summary>
         public static readonly Cart Instance;
+        
+        /// <summary>
+        /// Static Constructor for a Shopping Cart. If the current Session
+        /// already has a cart object, it is set to this Cart's instance object. 
+        /// Else this creates a new instance of Shopping Cart, instantiates it Items objects
+        /// And Creates a session and assigns it this instance.
+        /// </summary>
        static Cart()
         {
             if (HttpContext.Current.Session["cart"] == null)
@@ -25,8 +40,15 @@ namespace ProjectBeta
                 Instance = (Cart)HttpContext.Current.Session["cart"];
             }
         }
+        /// <summary>
+        /// Protected Default Constructor
+        /// </summary>
         protected Cart() { }
 
+        /// <summary>
+        /// Takes a product and adds it to the Items list
+        /// </summary>
+        /// <param name="product">The Product that is to be added.</param>
         public void AddItem(Products product)
         {
             CartItem newItem = new CartItem(product);
@@ -49,6 +71,11 @@ namespace ProjectBeta
             }
         }
 
+        /// <summary>
+        /// Sets the quantity for an item.
+        /// </summary>
+        /// <param name="prod">The product whose quantity is being set</param>
+        /// <param name="quantity">The quantity of the product in the Shopping Cart</param>
         public void SetItemQuantity(Products prod, int quantity)
         {
             if(quantity == 0)
@@ -70,11 +97,20 @@ namespace ProjectBeta
             
         }
 
+        /// <summary>
+        /// Removes an item from the Items list. 
+        /// </summary>
+        /// <param name="prod">The item to be removed from the list</param>
         public void RemoveItem(Products prod)
         {
             CartItem removedItem = new CartItem(prod);
             Items.Remove(removedItem);
         }
+
+        /// <summary>
+        /// Calculates the subtotal.
+        /// </summary>
+        /// <returns>And returns the subtotal</returns>
         public decimal GetSubTotal()
         {
             decimal subTotal = 0;
