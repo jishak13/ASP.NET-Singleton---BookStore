@@ -10,9 +10,9 @@
         <FooterStyle HorizontalAlign="Right" BackColor="#6C6B66" ForeColor="#FFFFFF" />
         <Columns>
             <asp:BoundField DataField="Title" HeaderText="Title" />
-            <asp:BoundField HeaderText="Quantity" />
-            <asp:BoundField HeaderText="Price" />
-            <asp:BoundField HeaderText="Total" />
+            <asp:BoundField DataField="Quantity" HeaderText="Quantity" />
+            <asp:BoundField DataField="UnitPrice" HeaderText="Price" DataFormatString="{0:C}" />
+            <asp:BoundField DataField="TotalPrice" HeaderText="Total" DataFormatString="{0:C}" />
         </Columns>
     </asp:GridView>
 
