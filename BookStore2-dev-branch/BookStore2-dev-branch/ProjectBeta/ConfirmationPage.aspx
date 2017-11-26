@@ -11,7 +11,7 @@
             <asp:BoundField DataField="Quantity" HeaderText="Quantity"  ItemStyle-HorizontalAlign="Right" HeaderStyle-HorizontalAlign="Right" >--%>
 
     <br />
-
+    <div id="Confirmation" runat="server">
     <asp:GridView ID="confirmCart" runat="server" AutoGenerateColumns="False" EmptyDataText="There is nothing in your shopping cart." Font-Size="Large" GridLines="None" Width="100%" CellPadding="5" ShowFooter="True" OnRowDataBound="GridView1_RowDataBound">
         <HeaderStyle HorizontalAlign="Right" BackColor="#494949" ForeColor="#AA8841" VerticalAlign="Middle" />
         <FooterStyle HorizontalAlign="Right" BackColor="#757575" ForeColor="White" />
@@ -44,14 +44,15 @@
         <ContentTemplate>
             <asp:Button ID="btnConfirm" runat="server"  Text="Confirm" OnClick="btnConfirm_Click1" CausesValidation="False"  />
             <asp:Button ID="btnCancel" runat="server" Text="Cancel"  OnClick="btnCancel_Click" CausesValidation="False"/>
-            <input id="btnconfirm2" type="button" value="button"  />
             <div id="confirmDiv" style="width: 67px" onclick ="btnConfirm_Click">
             </div>
         </ContentTemplate>
     </asp:UpdatePanel>
-    <br />
-
-
-
-
+    </div>
+    <div id="Confirmed" Visible="false" runat="server">
+        <h1 style="text-align:center">Order placed</h1>
+    </div>
+    <div id="Canceled" Visible="false" runat="server">
+        <h1 style="text-align:center">Order canceled</h1>
+    </div>
 </asp:Content>
