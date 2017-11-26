@@ -13,6 +13,15 @@ namespace ProjectBeta {
     public partial class ConfirmationPage {
         
         /// <summary>
+        /// Confirmation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Confirmation;
+        
+        /// <summary>
         /// confirmCart control.
         /// </summary>
         /// <remarks>
@@ -47,5 +56,23 @@ namespace ProjectBeta {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancel;
+        
+        /// <summary>
+        /// Confirmed control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Confirmed;
+        
+        /// <summary>
+        /// Canceled control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Canceled;
     }
 }

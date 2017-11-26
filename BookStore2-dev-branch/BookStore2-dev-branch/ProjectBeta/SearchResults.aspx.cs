@@ -13,6 +13,7 @@ namespace ProjectBeta
         //private List<Products> cart = new List<Products>();
         //CartItem cartItem;
         Cart cart;
+
         protected void Page_Load(object sender, EventArgs e)
         {
 

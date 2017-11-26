@@ -1,15 +1,16 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ShoppingResults.aspx.cs" Inherits="ProjectBeta.ShoppingResults" %>
+﻿<%@ Page Language="C#"   MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ShoppingResults.aspx.cs" Inherits="ProjectBeta.ShoppingResults" %>
 
-<!DOCTYPE html>
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server"  >
+    <br />
+    <br />
+    <br />
+    <p class="text-center">
+        <asp:Label ID="Label1" runat="server" Font-Size="XX-Large" Text="Label"></asp:Label>
+    </p>
+    <br />
+    <br />
+    
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
-</body>
-</html>
+
+</asp:Content>
+
