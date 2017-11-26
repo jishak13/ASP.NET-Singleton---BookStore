@@ -18,6 +18,24 @@ textarea {
     /*max-width: 280px;*/
 }
 
+.btnDefault {
+    color: #fff;
+    background-color: #B78C33;
+    border-color: #2e6da4;
+}
+
+.btnDefault:focus
+ {
+    color: #fff;
+    background-color: #a47e2d;
+    border-color: #122b40;
+}
+
+.btnDefault:hover {
+    color: #fff;
+    background-color: #a47e2d;
+    border-color: #204d74;
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

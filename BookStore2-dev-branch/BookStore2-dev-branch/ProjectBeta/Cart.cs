@@ -83,7 +83,7 @@ namespace ProjectBeta
         {
             if(quantity == 0)
             {
-                RemoveItem(prod);
+                RemoveItem(prod.Title);
                 return;
             }
 
@@ -104,10 +104,25 @@ namespace ProjectBeta
         /// Removes an item from the Items list. 
         /// </summary>
         /// <param name="prod">The item to be removed from the list</param>
-        public void RemoveItem(Products prod)
+        public void RemoveItem(String title)
         {
-            CartItem removedItem = new CartItem(prod);
-            Items.Remove(removedItem);
+
+            try
+            {
+                foreach (CartItem ci in Items)
+                {
+                    if (ci.Title.Contains(title))
+                    {
+                        Items.Remove(ci);
+                    }
+
+                }
+            }
+            catch(InvalidOperationException ex)
+            {
+
+            }
+            
         }
 
         /// <summary>

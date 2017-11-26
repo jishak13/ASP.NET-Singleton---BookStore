@@ -63,8 +63,9 @@ namespace ProjectBeta
                         string Course = selectedRow.Cells[3].Text;
                         string Code = selectedRow.Cells[4].Text;
                         string Price = selectedRow.Cells[5].Text;
+                        string newPrice = Price.Remove(0, 1);
 
-                        Products newProd = new Products(isbn, author, title, Course, Code, Price);
+                        Products newProd = new Products(isbn, author, title, Course, Code, newPrice);
                         //cart.Add(newProd);
                         cart.AddItem(newProd);
                         Session["cart"] = cart;

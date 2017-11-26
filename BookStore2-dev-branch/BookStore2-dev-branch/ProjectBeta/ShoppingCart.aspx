@@ -16,7 +16,7 @@
                     <asp:TemplateField HeaderText="Quantity" ItemStyle-HorizontalAlign="Left" HeaderStyle-HorizontalAlign="Left">
                         <ItemTemplate>
                             <asp:TextBox runat="server" ID="txtQuantity"  Columns="5" Text='<%# Eval("Quantity") %>' ></asp:TextBox><br />
-                            <asp:LinkButton runat="server" ID="btnRemove" Text="Remove" CommandName="Remove" CommandArgument='<%# Eval("Product") %>' style="font-size:12px;"></asp:LinkButton>
+                            <asp:LinkButton runat="server" ID="btnRemove" Text="Remove" CommandName="Remove" CausesValidation="false" CommandArgument='<%# Eval("Product") %>' style="font-size:12px;"></asp:LinkButton>
  
                         </ItemTemplate>
                     </asp:TemplateField>

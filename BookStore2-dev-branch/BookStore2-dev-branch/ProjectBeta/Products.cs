@@ -73,7 +73,7 @@ namespace ProjectBeta
         /// <returns>Returns the String output</returns>
         public override string ToString()
         {
-            return $"{Title}\t{Author}\t{Isbn}\t{Course}\t{Code}\t{Price}<br>";
+            return $"{Title}";
         }
     }
 }
