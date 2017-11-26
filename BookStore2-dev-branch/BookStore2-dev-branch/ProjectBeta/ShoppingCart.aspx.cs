@@ -29,12 +29,22 @@ namespace ProjectBeta
             }
             else
             {
+                
                 gvCart.DataSource = cart.Items;
                 gvCart.DataBind();
-                lblCartCount.Text = cart.Items.Count.ToString() + " items";
+                updateLabel();
                 checkForNull();
             }
          }
+        public void updateLabel()
+        {
+            int itemsInCart = 0;
+            foreach(CartItem ci in cart.Items)
+            {
+                itemsInCart += ci.Quantity;
+            }
+            lblCartCount.Text = itemsInCart + " items";
+        }
         public void checkForNull()
         {
             if (cart.Items.Count == 0)
@@ -73,9 +83,8 @@ namespace ProjectBeta
                     //Session["previouslyAddedItem"] = title;
                     gvCart.DataBind();
 
-                    lblCartCount.Text = cart.Items.Count.ToString() + " items";
+                    updateLabel();
                     checkForNull();
-
                 }
             }
 
