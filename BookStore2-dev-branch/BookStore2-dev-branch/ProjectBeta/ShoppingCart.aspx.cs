@@ -17,15 +17,65 @@ namespace ProjectBeta
             //gvCart.DataBind();
             //lblCartCount.Text = Cart.Instance.Items.Count.ToString();
             cart = (Cart)Session["cart"];
-            gvCart.DataSource = cart.Items;
-            gvCart.DataBind();
-            lblCartCount.Text = cart.Items.Count.ToString();
+            if (cart == null)
+            {
+                cart = new Cart();
+                gvCart.DataSource = cart.Items;
+                gvCart.DataBind();
+                btnCheckout.Visible = false;
+                CartContains.Visible = false;
+            }
+            else
+            {
+                gvCart.DataSource = cart.Items;
+                gvCart.DataBind();
+                lblCartCount.Text = cart.Items.Count.ToString() + " items";
+                if (cart.Items.Count == 0)
+                {
+                    lblCartCount.Text = "";
+                    CartContains.Visible = false;
+                    btnCheckout.Visible = false;
+                }
+            }
+            
+            
       
          }
-       public void gvCart_RowCommand(object sender, EventArgs e)
+
+        public void gvCart_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+            if (Page.IsPostBack)
+            {
+                if (e.CommandName == "Remove")
+                {
+                    cart = (Cart)Session["cart"];
+                    string pTitle = e.CommandArgument.ToString();
+                    //int index = Convert.ToInt32(e.CommandArgument);
+
+                    //GridViewRow selectedRow = gvCart.Rows[index];
+                    //string isbn = selectedRow.Cells[0].Text;
+                    //string author = selectedRow.Cells[1].Text;
+                    //string title = selectedRow.Cells[2].Text;
+                    //string Course = selectedRow.Cells[3].Text;
+                    //string Code = selectedRow.Cells[4].Text;
+                    //string Price = selectedRow.Cells[5].Text;
+                    //string newPrice = Price.Remove(0, 1);
+
+                    //Products newProd = new Products(isbn, author, title, Course, Code, newPrice);
+                    ////cart.Add(newProd);
+                    cart.RemoveItem(pTitle);
+                    //Session["cart"] = cart;
+
+                    //addToCartLabel.Text = title + " added to cart!";
+
+                    //Session["previouslyAddedItem"] = title;
+                    gvCart.DataBind();
+
+                }
+            }
 
         }
+
         public void gvCart_RowDataBound(object sender,GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.Footer)
@@ -38,5 +88,11 @@ namespace ProjectBeta
         {
 
         }
+
+        protected void btnCheckout_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/ConfirmationPage");
+        }
+
     }
 }

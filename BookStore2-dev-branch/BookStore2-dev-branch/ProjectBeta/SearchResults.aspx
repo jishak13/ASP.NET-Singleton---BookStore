@@ -29,10 +29,10 @@
                 </asp:BoundField>
 
                 <asp:BoundField DataField="code" HeaderText="Code" SortExpression="code" >
-                <HeaderStyle BackColor="#494949" ForeColor="#AA8841" HorizontalAlign="Right" />
+                <HeaderStyle BackColor="#494949" ForeColor="#AA8841" HorizontalAlign="Left" />
                 </asp:BoundField>
-                <asp:BoundField DataField="price" HeaderText="Price" SortExpression="price" >
-                <HeaderStyle BackColor="#494949" ForeColor="#AA8841" HorizontalAlign="Right" />
+                <asp:BoundField DataField="price" HeaderText="Price" SortExpression="price" DataFormatString="{0:C}">
+                <HeaderStyle BackColor="#494949" ForeColor="#AA8841" HorizontalAlign="Left" />
                 </asp:BoundField>
                 <asp:ButtonField ButtonType="Button" CommandName="AddToCart" Text="Add to Cart" >
                 <HeaderStyle BackColor="#494949" />

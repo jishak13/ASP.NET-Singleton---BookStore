@@ -42,17 +42,9 @@
     <br />
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-            <asp:Button ID="btnConfirm" runat="server"  Text="Confirm" OnClick="btnConfirm_Click1" CausesValidation="False"  />
-            <asp:Button ID="btnCancel" runat="server" Text="Cancel"  OnClick="btnCancel_Click" CausesValidation="False"/>
-            <div id="confirmDiv" style="width: 67px" onclick ="btnConfirm_Click">
-            </div>
+            <asp:Button ID="btnConfirm" runat="server"  Text="Confirm" OnClick="btnConfirm_Click1" CausesValidation="False" Visible="False"  />
+            <asp:Button ID="btnCancel" runat="server" Text="Cancel"  OnClick="btnCancel_Click" CausesValidation="False" Visible="False"/>
         </ContentTemplate>
     </asp:UpdatePanel>
-    </div>
-    <div id="Confirmed" Visible="false" runat="server">
-        <h1 style="text-align:center">Order placed</h1>
-    </div>
-    <div id="Canceled" Visible="false" runat="server">
-        <h1 style="text-align:center">Order canceled</h1>
     </div>
 </asp:Content>

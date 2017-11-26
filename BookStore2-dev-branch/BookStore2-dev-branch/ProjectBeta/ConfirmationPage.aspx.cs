@@ -13,6 +13,11 @@ namespace ProjectBeta
         protected void Page_Load(object sender, EventArgs e)
         {
             cart = (Cart)Session["cart"];
+            if (cart.Items.Count > 0)
+            {
+                btnConfirm.Visible = true;
+                btnCancel.Visible = true;
+            }
             //confirmCart.DataSource = Cart.Instance.Items;
             confirmCart.DataSource = cart.Items;
             confirmCart.DataBind();
