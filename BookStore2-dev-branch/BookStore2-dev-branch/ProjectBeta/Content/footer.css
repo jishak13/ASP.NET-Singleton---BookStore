@@ -14,8 +14,11 @@ footer {
         margin: 0 auto;
         display: inline-block;
         padding-top: 25px;
+  
     }
-
+        footer ul a {
+            color: #b1aca1;
+        }
         footer ul li {
             float: left;
         }
@@ -41,7 +44,7 @@ footer {
     }
 
     .footer-top a {
-        color: #FFF;
+        color: #b1aca1;
         text-decoration: none;
     }
 

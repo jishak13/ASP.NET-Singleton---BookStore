@@ -42,8 +42,8 @@
     <br />
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-            <asp:Button ID="btnConfirm" runat="server"  Text="Confirm" OnClick="btnConfirm_Click1" CausesValidation="False" Visible="False"  />
-            <asp:Button ID="btnCancel" runat="server" Text="Cancel"  OnClick="btnCancel_Click" CausesValidation="False" Visible="False"/>
+            <asp:Button ID="btnConfirm" class="btn btn-primary btnDefault" runat="server"  Text="Confirm" OnClick="btnConfirm_Click1" CausesValidation="False" Visible="False"  />
+            <asp:Button ID="btnCancel" class="btn btn-primary btnDefault" runat="server" Text="Cancel"  OnClick="btnCancel_Click" CausesValidation="False" Visible="False"/>
         </ContentTemplate>
     </asp:UpdatePanel>
     </div>

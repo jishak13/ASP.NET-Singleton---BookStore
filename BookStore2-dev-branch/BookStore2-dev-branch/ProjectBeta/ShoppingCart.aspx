@@ -27,7 +27,7 @@
             </asp:GridView>
 
 
-    <asp:Button ID="btnCheckout" runat="server" Text="Checkout" style="float: right" CausesValidation="False" OnClick="btnCheckout_Click"/>
+    <asp:Button ID="btnCheckout" class = "btn btn-primary btnDefault" runat="server" Text="Checkout" style="float: right" CausesValidation="False" OnClick="btnCheckout_Click"/>
 </asp:Content>
 
  
