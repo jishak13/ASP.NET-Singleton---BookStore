@@ -19,7 +19,7 @@ namespace ProjectBeta
         /// <summary>
         /// The instance of a shopping cart
         /// </summary>
-        public static readonly Cart Instance;
+        //public static readonly Cart Instance;
         
         /// <summary>
         /// Static Constructor for a Shopping Cart. If the current Session
@@ -29,21 +29,24 @@ namespace ProjectBeta
         /// </summary>
        static Cart()
         {
-            if (HttpContext.Current.Session["cart"] == null)
-            {
-                Instance = new Cart();
-                Instance.Items = new List<CartItem>();
-                HttpContext.Current.Session["cart"] = Instance;
-            }
-            else
-            {
-                Instance = (Cart)HttpContext.Current.Session["cart"];
-            }
+            //if (HttpContext.Current.Session["cart"] == null)
+            //{
+            //    Instance = new Cart();
+            //    Instance.Items = new List<CartItem>();
+            //    HttpContext.Current.Session["cart"] = Instance;
+            //}
+            //else
+            //{
+            //    Instance = (Cart)HttpContext.Current.Session["cart"];
+            //}
         }
         /// <summary>
         /// Protected Default Constructor
         /// </summary>
-        protected Cart() { }
+        public Cart() {
+            Items = new List<CartItem>();
+
+        }
 
         /// <summary>
         /// Takes a product and adds it to the Items list
