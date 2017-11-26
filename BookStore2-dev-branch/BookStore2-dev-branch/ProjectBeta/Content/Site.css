@@ -30,7 +30,7 @@ textarea {
     }
 }
 #shoppingCart {
-    background:url(../Images/cart-30-px.png) no-repeat;
+    /*background:url(../Images/cart-20.png) no-repeat;*/
     height: 30px;
     width: 30px;
     border: none;

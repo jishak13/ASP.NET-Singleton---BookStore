@@ -50,8 +50,7 @@ namespace ProjectBeta
                     Session["cart"] = cart;
 
                 }
-                else
-                {
+            
                     cart = (Cart)Session["cart"];
                     if (e.CommandName == "AddToCart")
                     {
@@ -73,7 +72,7 @@ namespace ProjectBeta
                         addToCartLabel.Text = title + " added to cart!";
 
                         //Session["previouslyAddedItem"] = title;
-                    }
+                    
 
                 }
             //if (e.CommandName == "AddToCart")

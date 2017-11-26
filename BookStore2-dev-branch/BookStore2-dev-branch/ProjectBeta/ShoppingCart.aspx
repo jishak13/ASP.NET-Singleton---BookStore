@@ -6,9 +6,9 @@
         <asp:Label ID="lblCartCount" runat="server"></asp:Label>
 &nbsp;Items
         <asp:GridView runat="server" ID="gvCart" AutoGenerateColumns="False" EmptyDataText="There is nothing in your shopping cart." GridLines="None" Width="100%" CellPadding="5" ShowFooter="True" DataKeyNames="Product" OnRowDataBound="gvCart_RowDataBound" OnRowCommand="gvCart_RowCommand" >
-                <HeaderStyle HorizontalAlign="Left" BackColor="#333333" ForeColor="#AA8841" />
-                <FooterStyle HorizontalAlign="Right" BackColor="#6C6B66" ForeColor="#FFFFFF" />
-                <AlternatingRowStyle BackColor="#F8F8F8" />
+                <HeaderStyle HorizontalAlign="Left" BackColor="#494949" ForeColor="#AA8841" />
+                <FooterStyle HorizontalAlign="Right" BackColor="#757575" ForeColor="#FFFFFF" />
+                <%--<AlternatingRowStyle BackColor="#F8F8F8" />--%>
                 <Columns>
  
                     <asp:BoundField DataField="Title" HeaderText="Title" ItemStyle-HorizontalAlign="Left" HeaderStyle-HorizontalAlign="Left" />
@@ -26,7 +26,7 @@
             </asp:GridView>
 
 
-            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ConfirmationPage.aspx" CssClass="has-feedback" style="float: right">Checkout</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ConfirmationPage.aspx"  CssClass ="has-feedback" style="float: right">Checkout</asp:HyperLink>
 </asp:Content>
 
  

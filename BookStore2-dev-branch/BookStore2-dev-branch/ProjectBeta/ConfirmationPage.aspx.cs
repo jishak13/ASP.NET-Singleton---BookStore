@@ -33,19 +33,23 @@ namespace ProjectBeta
 
         protected void btnConfirm_Click1(object sender, EventArgs e)
         {
+
             cart = new Cart();
             Session["confirm"] = "Order placed";
             Session["cart"] = cart;
             Response.Redirect("~/ShoppingResults");
             
+
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
+
             cart = new Cart();
             Session["confirm"] = "Order canceled";
             Session["cart"] = cart;
             Response.Redirect("~/ShoppingResults");
+
         }
     }
 }
