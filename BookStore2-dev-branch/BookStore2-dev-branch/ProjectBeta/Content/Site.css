@@ -75,3 +75,7 @@ textarea {
     color: white;
     text-align: center;
 }
+
+#jumbotronImg {
+    height: 30vh;
+}
