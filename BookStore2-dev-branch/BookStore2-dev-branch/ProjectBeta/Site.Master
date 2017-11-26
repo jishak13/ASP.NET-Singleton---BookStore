@@ -66,7 +66,7 @@
                      <%--<div class="input-group">--%>
                         <asp:TextBox ID="serInput" runat="server" CssClass="ser-input form-control navbar-right" Text="Search..." Height="35px" BackColor="Transparent" ForeColor="#9A9DA0"></asp:TextBox>
                     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="ShoppingCart.aspx">
-                        <asp:image ID="shoppingCart" runat="server" ImageUrl="~/Images/cart-30-px.png"  >  </asp:image>
+                        <asp:image ID="shoppingCart" runat="server" ImageUrl="~/Images/OjCart.png"  >  </asp:image>
                      </asp:HyperLink>
                         <div class="search-full-view">
                             <div class="input-group">

@@ -33,12 +33,12 @@ namespace ProjectBeta
 
         protected void btnConfirm_Click1(object sender, EventArgs e)
         {
-
+            //Response.Redirect("~/ShoppingResults?=confirmed");
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-
+            //Response.Redirect("~/ShoppingResults?=canceled");
         }
     }
 }

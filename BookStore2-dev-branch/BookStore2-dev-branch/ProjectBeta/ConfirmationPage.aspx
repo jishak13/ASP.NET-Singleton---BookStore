@@ -13,8 +13,8 @@
     <br />
 
     <asp:GridView ID="confirmCart" runat="server" AutoGenerateColumns="False" EmptyDataText="There is nothing in your shopping cart." Font-Size="Large" GridLines="None" Width="100%" CellPadding="5" ShowFooter="True" OnRowDataBound="GridView1_RowDataBound">
-        <HeaderStyle HorizontalAlign="Right" BackColor="#333333" ForeColor="#AA8841" VerticalAlign="Middle" />
-        <FooterStyle HorizontalAlign="Right" BackColor="#6C6B66" ForeColor="White" />
+        <HeaderStyle HorizontalAlign="Right" BackColor="#494949" ForeColor="#AA8841" VerticalAlign="Middle" />
+        <FooterStyle HorizontalAlign="Right" BackColor="#757575" ForeColor="White" />
         <Columns>
             <asp:BoundField DataField="Title" HeaderText="Title" ItemStyle-HorizontalAlign="Left" HeaderStyle-HorizontalAlign="Left" >
                     <HeaderStyle HorizontalAlign="Left"></HeaderStyle>
