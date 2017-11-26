@@ -104,6 +104,7 @@ namespace ProjectBeta
         /// Removes an item from the Items list. 
         /// </summary>
         /// <param name="prod">The item to be removed from the list</param>
+
         public void RemoveItem(String title)
         {
 
@@ -122,6 +123,7 @@ namespace ProjectBeta
             {
 
             }
+
             
         }
 

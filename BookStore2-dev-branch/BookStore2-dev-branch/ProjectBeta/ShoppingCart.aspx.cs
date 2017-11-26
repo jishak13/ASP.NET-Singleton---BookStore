@@ -17,12 +17,32 @@ namespace ProjectBeta
             //gvCart.DataBind();
             //lblCartCount.Text = Cart.Instance.Items.Count.ToString();
             cart = (Cart)Session["cart"];
-            gvCart.DataSource = cart.Items;
-            gvCart.DataBind();
-            lblCartCount.Text = cart.Items.Count.ToString();
+            if (cart == null)
+            {
+                cart = new Cart();
+                gvCart.DataSource = cart.Items;
+                gvCart.DataBind();
+                btnCheckout.Visible = false;
+                CartContains.Visible = false;
+            }
+            else
+            {
+                gvCart.DataSource = cart.Items;
+                gvCart.DataBind();
+                lblCartCount.Text = cart.Items.Count.ToString() + " items";
+                if (cart.Items.Count == 0)
+                {
+                    lblCartCount.Text = "";
+                    CartContains.Visible = false;
+                    btnCheckout.Visible = false;
+                }
+            }
+            
+            
       
          }
-       public void gvCart_RowCommand(object sender, GridViewCommandEventArgs e)
+
+        public void gvCart_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (Page.IsPostBack)
             {
@@ -53,8 +73,9 @@ namespace ProjectBeta
 
                 }
             }
-           
+
         }
+
         public void gvCart_RowDataBound(object sender,GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.Footer)
@@ -67,5 +88,11 @@ namespace ProjectBeta
         {
 
         }
+
+        protected void btnCheckout_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/ConfirmationPage");
+        }
+
     }
 }

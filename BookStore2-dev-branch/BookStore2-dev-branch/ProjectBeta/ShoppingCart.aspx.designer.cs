@@ -13,6 +13,15 @@ namespace ProjectBeta {
     public partial class ShoppingCart {
         
         /// <summary>
+        /// CartContains control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CartContains;
+        
+        /// <summary>
         /// lblCartCount control.
         /// </summary>
         /// <remarks>
@@ -31,12 +40,12 @@ namespace ProjectBeta {
         protected global::System.Web.UI.WebControls.GridView gvCart;
         
         /// <summary>
-        /// HyperLink2 control.
+        /// btnCheckout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
+        protected global::System.Web.UI.WebControls.Button btnCheckout;
     }
 }
