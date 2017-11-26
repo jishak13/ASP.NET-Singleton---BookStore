@@ -13,7 +13,7 @@ namespace ProjectBeta
         {
             confirmCart.DataSource = Cart.Instance.Items;
             confirmCart.DataBind();
-   
+            //btnConfirm.Attributes.Add("onclick", btnConfirm_Click1 + ";return true;");
         }
 
         protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
@@ -26,6 +26,14 @@ namespace ProjectBeta
 
      
 
-    
+        protected void btnConfirm_Click1(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
