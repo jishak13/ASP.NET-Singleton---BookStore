@@ -16,6 +16,7 @@ namespace ProjectBeta
             //gvCart.DataSource = Cart.Instance.Items;
             //gvCart.DataBind();
             //lblCartCount.Text = Cart.Instance.Items.Count.ToString();
+            
             cart = (Cart)Session["cart"];
             if (cart == null)
             {
@@ -24,21 +25,25 @@ namespace ProjectBeta
                 gvCart.DataBind();
                 btnCheckout.Visible = false;
                 CartContains.Visible = false;
+                lblCartCount.Visible = false;
             }
             else
             {
                 gvCart.DataSource = cart.Items;
                 gvCart.DataBind();
                 lblCartCount.Text = cart.Items.Count.ToString() + " items";
-                if (cart.Items.Count == 0)
-                {
-                    lblCartCount.Text = "";
-                    CartContains.Visible = false;
-                    btnCheckout.Visible = false;
-                }
+                checkForNull();
             }
          }
-
+        public void checkForNull()
+        {
+            if (cart.Items.Count == 0)
+            {
+                lblCartCount.Text = "";
+                CartContains.Visible = false;
+                btnCheckout.Visible = false;
+            }
+        }
         public void gvCart_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (Page.IsPostBack)
@@ -69,13 +74,8 @@ namespace ProjectBeta
                     gvCart.DataBind();
 
                     lblCartCount.Text = cart.Items.Count.ToString() + " items";
+                    checkForNull();
 
-                    if (cart.Items.Count == 0)
-                    {
-                        lblCartCount.Text = "";
-                        CartContains.Visible = false;
-                        btnCheckout.Visible = false;
-                    }
                 }
             }
 
