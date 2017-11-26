@@ -189,6 +189,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="SearchResults.aspx" />
     <Content Include="ShoppingCart.aspx" />
+    <Content Include="ShoppingResults.aspx" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -254,6 +255,13 @@
       <DependentUpon>ShoppingCart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Cart.cs" />
+    <Compile Include="ShoppingResults.aspx.cs">
+      <DependentUpon>ShoppingResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShoppingResults.aspx.designer.cs">
+      <DependentUpon>ShoppingResults.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

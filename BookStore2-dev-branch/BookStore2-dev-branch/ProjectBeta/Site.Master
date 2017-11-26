@@ -134,11 +134,11 @@
                                  <li>
                                     <a href="#">Home</a>
                                   </li>
-                                   
+                                 
                                   <li>
                                      <a href="#">About</a>
                                   </li>
-                                   
+
                                   <li>
                                     <a href="#">Blog</a>
                                   </li>
@@ -157,13 +157,7 @@
             </div>    
     </footer>
      
-    <div class="copyright">
-        <div class="container">
-            <div class="row text-center">
-         	    <p>Copyright © 2017 All rights reserved</p>
-            </div>        
- 	   </div>
-    </div>
+  
 
 </body>
 </html>

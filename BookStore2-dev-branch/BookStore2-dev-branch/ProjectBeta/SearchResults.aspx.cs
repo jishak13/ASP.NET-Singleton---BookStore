@@ -10,8 +10,10 @@ namespace ProjectBeta
     public partial class SearchResults : System.Web.UI.Page
     {
         private string currentSearch;
-        private List<Products> cart = new List<Products>();
-        CartItem cartItem;
+        //private List<Products> cart = new List<Products>();
+        //CartItem cartItem;
+        Cart cart;
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -40,31 +42,60 @@ namespace ProjectBeta
 
         protected void GridView1_RowCommand1(object sender, GridViewCommandEventArgs e)
         {
-            //if (Page.IsPostBack)
-            //{
-            //    if(Session["cart"]!=null)
-                
-            //}
-            if (e.CommandName == "AddToCart")
+            if (Page.IsPostBack)
             {
-                int index = Convert.ToInt32(e.CommandArgument);
+                if (Session["cart"] == null)
+                {
+                    cart = new Cart();
+                    Session["cart"] = cart;
 
-                GridViewRow selectedRow = GridView1.Rows[index];
-                string isbn = selectedRow.Cells[0].Text;
-                string author = selectedRow.Cells[1].Text;
-                string title = selectedRow.Cells[2].Text;
-                string Course = selectedRow.Cells[3].Text;
-                string Code = selectedRow.Cells[4].Text;
-                string Price = selectedRow.Cells[5].Text;
+                }
+                else
+                {
+                    cart = (Cart)Session["cart"];
+                    if (e.CommandName == "AddToCart")
+                    {
+                        int index = Convert.ToInt32(e.CommandArgument);
 
-                Products newProd = new Products(isbn, author, title, Course, Code, Price);
-                //cart.Add(newProd);
-                Cart.Instance.AddItem(newProd);
+                        GridViewRow selectedRow = GridView1.Rows[index];
+                        string isbn = selectedRow.Cells[0].Text;
+                        string author = selectedRow.Cells[1].Text;
+                        string title = selectedRow.Cells[2].Text;
+                        string Course = selectedRow.Cells[3].Text;
+                        string Code = selectedRow.Cells[4].Text;
+                        string Price = selectedRow.Cells[5].Text;
+
+                        Products newProd = new Products(isbn, author, title, Course, Code, Price);
+                        //cart.Add(newProd);
+                        cart.AddItem(newProd);
+                        Session["cart"] = cart;
+
+                        addToCartLabel.Text = title + " added to cart!";
+
+                        //Session["previouslyAddedItem"] = title;
+                    }
+
+                }
+            //if (e.CommandName == "AddToCart")
+            //{
+            //    int index = Convert.ToInt32(e.CommandArgument);
+
+            //    GridViewRow selectedRow = GridView1.Rows[index];
+            //    string isbn = selectedRow.Cells[0].Text;
+            //    string author = selectedRow.Cells[1].Text;
+            //    string title = selectedRow.Cells[2].Text;
+            //    string Course = selectedRow.Cells[3].Text;
+            //    string Code = selectedRow.Cells[4].Text;
+            //    string Price = selectedRow.Cells[5].Text;
+
+            //    Products newProd = new Products(isbn, author, title, Course, Code, Price);
+            //    //cart.Add(newProd);
+            //    Cart.Instance.AddItem(newProd);
 
 
-                addToCartLabel.Text = title + " added to cart!";
+            //    addToCartLabel.Text = title + " added to cart!";
 
-                //Session["previouslyAddedItem"] = title;
+            //    //Session["previouslyAddedItem"] = title;
                 
             }
         }

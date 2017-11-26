@@ -24,5 +24,14 @@
                     <asp:BoundField DataField="TotalPrice" HeaderText="Total" ItemStyle-HorizontalAlign="Right" HeaderStyle-HorizontalAlign="Right" DataFormatString="{0:C}" />
                 </Columns>
             </asp:GridView>
+
+
             <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ConfirmationPage.aspx" CssClass="has-feedback" style="float: right">Checkout</asp:HyperLink>
 </asp:Content>
+
+ 
+    
+
+
+
+
