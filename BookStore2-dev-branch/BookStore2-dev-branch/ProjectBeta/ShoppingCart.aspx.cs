@@ -37,9 +37,6 @@ namespace ProjectBeta
                     btnCheckout.Visible = false;
                 }
             }
-            
-            
-      
          }
 
         public void gvCart_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -71,6 +68,14 @@ namespace ProjectBeta
                     //Session["previouslyAddedItem"] = title;
                     gvCart.DataBind();
 
+                    lblCartCount.Text = cart.Items.Count.ToString() + " items";
+
+                    if (cart.Items.Count == 0)
+                    {
+                        lblCartCount.Text = "";
+                        CartContains.Visible = false;
+                        btnCheckout.Visible = false;
+                    }
                 }
             }
 
