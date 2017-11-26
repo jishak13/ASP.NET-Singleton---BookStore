@@ -157,7 +157,12 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Images\cart-50-px.png" />
     <Content Include="Images\cart-30-px.png" />
+    <Content Include="Images\datascience.jpg" />
+    <Content Include="Images\intotoIS.jpg" />
     <Content Include="Images\OjCart.png" />
+    <Content Include="Images\PhoenixProject.jpg" />
+    <Content Include="Images\VS2017.jpg" />
+    <Content Include="Images\webdev.jpg" />
     <Content Include="JS\search.js" />
     <Content Include="NewTest.aspx" />
     <Content Include="Scripts\bootstrap.js" />

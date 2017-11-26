@@ -8,31 +8,52 @@
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+         
         </ol>
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <img src="https://www.packtpub.com/sites/default/files/bookretailers/V06960_MockupCover.png" alt="Chicago" class="center-block">
-                <div class="carousel-caption">
-                    <h3>Los Angeles - FIRST SLIDE</h3>
-                    <p>LA is always so much fun!</p>
+                <img src="Images/PhoenixProject.jpg" alt="PhoenixProj" class="center-block-carousel">
+                <div class="carousel-caption2" >
+                    <h3  >Dive into DevOps!</h3>
+                 
                 </div>
             </div>
 
             <div class="item">
-                <img src="https://www.packtpub.com/sites/default/files/bookretailers/V06960_MockupCover.png" alt="Chicago" class="center-block">
-                <div class="carousel-caption">
-                    <h3>Los Angeles - SECPMD SLIDE</h3>
-                    <p>LA is always so much fun!</p>
+                <img src="Images/intotoIs.jpg" alt="IntroToIs" class="center-block-carousel">
+                <div id="cc" class="carousel-caption2" >
+                    <br />
+                    <br />
+                    <br />
+                    <h3>Do you IS?</h3>
+                  
+                </div>
+            </div>
+              <div class="item">
+                <img src="Images/webdev.jpg" alt="WebDev" class="center-block-carousel">
+                <div class="carousel-caption2">
+                    <h3>Learn to be a Web Developer, now!</h3>
+                   
+                </div>
+            </div>
+              <div class="item">
+                <img src="Images/VS2017.jpg" alt="Visual Studio" class="center-block-carousel">
+                <div class="carousel-caption2">
+                    <h3>Build awesome Windows Applications in C#!</h3>
+                  
                 </div>
             </div>
 
+
             <div class="item">
-                <img src="https://www.packtpub.com/sites/default/files/bookretailers/V06960_MockupCover.png" alt="New York" class="center-block">
-                <div class="carousel-caption">
-                    <h3>Los Angeles  - THIRD SLIDE</h3>
-                    <p>LA is always so much fun!</p>
+                <img src="Images/datascience.jpg" alt="DateScience" class="center-block-carousel">
+                <div class="carousel-caption2">
+                    <h3 >Machine Learning Baby!</h3>
+             
                 </div>
             </div>
         </div>
