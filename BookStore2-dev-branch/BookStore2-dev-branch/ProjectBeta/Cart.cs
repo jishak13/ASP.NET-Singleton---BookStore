@@ -143,7 +143,7 @@ namespace ProjectBeta
 
         public decimal GetShipping()
         {
-            return ((decimal).01 * GetSubTotal()) * 100;
+            return ((decimal).01 * GetSubTotal()) ;
         }
 
         public decimal GetTax()
